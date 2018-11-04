@@ -1,0 +1,12 @@
+# SPDX-License-Identifier: BSD-2-Clause
+__pycache__/
+*.py[cod]
+
+build/
+dist/
+
+*.egg-info/
+
+.pytest_cache/
+.tox/
+.coverage

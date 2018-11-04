@@ -1,0 +1,4 @@
+# SPDX-License-Identifier: BSD-2-Clause
+include README.rst LICENSE
+graft src
+global-exclude *.py[co]

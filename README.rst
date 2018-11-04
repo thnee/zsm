@@ -4,3 +4,6 @@ zsm
 ===
 
 ZFS Snapshot manager.
+
+- FreeBSD and Linux
+- Requires Python >= 3.6
