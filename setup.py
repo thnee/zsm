@@ -8,7 +8,10 @@ setuptools.setup(
     keywords="zfs snapshots freebsd linux",
     description="ZFS Snapshot Manager",
     long_description="Please see the project links.",
-    project_urls={"Source": "https://gitlab.com/thnee/zsm"},
+    project_urls={
+        "Documentation": "https://zsm.readthedocs.io/",
+        "Source": "https://gitlab.com/thnee/zsm",
+    },
     license="BSD-2-Clause",
     author="Mattias Lindvall",
     author_email="mattias.lindvall@gmail.com",

@@ -13,6 +13,7 @@ def clean(c):
         c.run("rm -rf build dist src/*.egg-info", warn=True)
         c.run("rm -rf .pytest_cache .tox .coverage", warn=True)
         c.run("find . -type d -name __pycache__ -print0 | xargs -0 rm -rf", warn=True)
+        c.run("rm -rf docs/_build", warn=True)
 
 
 @task(aliases=["t"])
@@ -44,3 +45,9 @@ def publish(c, live=False):
 def format_code(c):
     with c.cd(str(REPO_ROOT)):
         c.run(f"black src/ tests/ setup.py tasks.py", pty=True)
+
+
+@task(aliases=["d"])
+def docs_auto(c):
+    with c.cd(str(REPO_ROOT)):
+        c.run("sphinx-autobuild docs docs/_build/html")

@@ -2,5 +2,6 @@
 -r requirements/dev.txt
 -r requirements/test.txt
 -r requirements/build.txt
+-r requirements/docs.txt
 
 -e .
