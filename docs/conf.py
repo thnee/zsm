@@ -1,6 +1,3 @@
-import pkg_resources
-
-
 # -- Project information -----------------------------------------------------
 
 project = "zsm"
@@ -8,9 +5,9 @@ copyright = "2018, Mattias Lindvall"
 author = "Mattias Lindvall"
 
 # The short X.Y version
-version = pkg_resources.get_distribution("zsm").version
+version = "0.1.0"
 # The full version, including alpha/beta/rc tags
-release = pkg_resources.get_distribution("zsm").version
+release = version
 
 
 # -- General configuration ---------------------------------------------------
