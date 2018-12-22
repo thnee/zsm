@@ -25,6 +25,7 @@ Table of Contents
 
    install
    quickstart
+   config
    cli
    contribute
 
