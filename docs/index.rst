@@ -27,6 +27,7 @@ Table of Contents
    quickstart
    config
    cli
+   faq
    contribute
 
 
