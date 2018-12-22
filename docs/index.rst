@@ -28,6 +28,7 @@ Table of Contents
    config
    cli
    faq
+   changelog
    contribute
 
 
