@@ -14,16 +14,12 @@ The default location is
     snapshots:
       - dataset: "tank/data"
         label: "daily"
-        frequency:
-          name: "days"
-          value: 1
+        frequency: "1d"
         retention: 30
 
       - dataset: "tank/data"
         label: "hourly"
-        frequency:
-          name: "hours"
-          value: 1
+        frequency: "1h"
         retention: 24
 
 Step 2: Verify configuration
