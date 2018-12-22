@@ -13,18 +13,18 @@ The default location is
 
     snapshots:
       - dataset: "tank/data"
-        name: "hourly"
-        delta:
-          name: "hours"
-          value: 1
-        retention: 24
-
-      - dataset: "tank/data"
-        name: "daily"
-        delta:
+        label: "daily"
+        frequency:
           name: "days"
           value: 1
         retention: 30
+
+      - dataset: "tank/data"
+        label: "hourly"
+        frequency:
+          name: "hours"
+          value: 1
+        retention: 24
 
 Step 2: Verify configuration
 ----------------------------
