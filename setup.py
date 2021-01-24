@@ -18,7 +18,7 @@ setuptools.setup(
     package_dir={"": "src"},
     packages=["zsm"],
     python_requires=">=3.6",
-    install_requires=["click~=6.7", "pid~=2.2.0", "zsm-lib~=0.2.0"],
+    install_requires=["click~=7.1.2", "pid~=3.0.4", "zsm-lib~=0.2.0"],
     entry_points={"console_scripts": ["zsm = zsm.cli:cli"]},
     classifiers=[
         # "Development Status :: 1 - Planning",

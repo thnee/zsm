@@ -6,6 +6,13 @@ Changelog
 Changelog for zsm
 -----------------
 
+0.2.1
+^^^^^
+
+Update zsm-lib to version 0.2.1.
+
+Update requirements to newer versions.
+
 0.2.0
 ^^^^^
 
@@ -26,6 +33,13 @@ Add commands:
 
 Changelog for zsm-lib
 ---------------------
+
+0.2.1
+^^^^^
+
+Update requirements to newer versions.
+
+Fix crash in _deserialize after upgrading to marshmallow 3.
 
 0.2.0
 ^^^^^
