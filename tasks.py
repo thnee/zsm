@@ -44,7 +44,7 @@ def publish(c, live=False):
 @task(aliases=["f"])
 def format_code(c):
     with c.cd(str(REPO_ROOT)):
-        c.run(f"black src/ tests/ setup.py tasks.py", pty=True)
+        c.run("black src/ tests/ setup.py tasks.py", pty=True)
 
 
 @task(aliases=["d"])
