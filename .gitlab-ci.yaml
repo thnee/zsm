@@ -23,8 +23,3 @@ verify-3.8:
     extends: ".verify"
     stage: "verify"
     image: "python:3.8"
-
-verify-3.9:
-    extends: ".verify"
-    stage: "verify"
-    image: "python:3.9"
