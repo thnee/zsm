@@ -1,11 +1,11 @@
 # -- Project information -----------------------------------------------------
 
 project = "zsm"
-copyright = "2018, Mattias Lindvall"
+copyright = "2018-2021, Mattias Lindvall"
 author = "Mattias Lindvall"
 
 # The short X.Y version
-version = "0.2.0"
+version = "0.3.0"
 # The full version, including alpha/beta/rc tags
 release = version
 
@@ -36,8 +36,7 @@ htmlhelp_basename = "zsmdoc"
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, "zsm.tex", "ZSM Documentation",
-     author, "manual"),
+    (master_doc, "zsm.tex", "ZSM Documentation", author, "manual"),
 ]
 
 
@@ -45,10 +44,7 @@ latex_documents = [
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [
-    (master_doc, "zsm", "ZSM Documentation",
-     [author], 1)
-]
+man_pages = [(master_doc, "zsm", "ZSM Documentation", [author], 1)]
 
 
 # -- Options for Texinfo output ----------------------------------------------
@@ -57,7 +53,13 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, "zsm", "ZSM Documentation",
-     author, "zsm", "ZFS Snapshot Manager",
-     "Miscellaneous"),
+    (
+        master_doc,
+        "zsm",
+        "ZSM Documentation",
+        author,
+        "zsm",
+        "ZFS Snapshot Manager",
+        "Miscellaneous",
+    ),
 ]

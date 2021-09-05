@@ -1,3 +1,0 @@
-# SPDX-License-Identifier: BSD-2-Clause
-wheel==0.36.2
-twine==3.3.0

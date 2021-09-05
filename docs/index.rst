@@ -9,13 +9,10 @@ ZSM is a console program that manages ZFS snapshots.
 - Configure a custom schedule via the config file.
 - Run in background by adding it to crontab.
 
-Technically, most of the functionality is in zsm-lib,
-and zsm is just a thin console interface.
-
 Project status
 --------------
 
-Alpha but works very well and has great test coverage.
+Beta but works very well and has great test coverage.
 
 Table of Contents
 =================

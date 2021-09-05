@@ -3,12 +3,19 @@
 Installation
 ============
 
+FreeBSD
+-------
+
+.. code-block:: text
+
+    pkg install zsm
+
 PyPI
 ----
 
 .. code-block:: text
 
-    $ pip install zsm
+    pip install zsm
 
 .. note::
 

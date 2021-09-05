@@ -16,7 +16,7 @@ For example:
 
 .. code-block:: text
 
-    $ zsm version
+    zsm version
 
 Options to ``cron`` command
 ------------------------------

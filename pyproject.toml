@@ -1,4 +1,33 @@
 # SPDX-License-Identifier: BSD-2-Clause
+[tool.pytest.ini_options]
+addopts = '''
+    --cache-clear
+    --exitfirst
+    --quiet
+    tests/
+'''
+
+[tool.coverage.report]
+fail_under = 88
+precision = 2
+show_missing = true
+skip_covered = true
+
 [tool.black]
 line-length = 88
-py36 = true
+target-version = ["py38"]
+include = '\.pyi?$'
+exclude = '''
+/(
+  | \.git
+  | __pycache__
+  | \.tox
+  | \.pytest_cache
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 88
+py_version = "38"
+lines_after_imports = 2

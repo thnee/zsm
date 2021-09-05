@@ -1,7 +1,5 @@
 # SPDX-License-Identifier: BSD-2-Clause
--r requirements/dev.txt
--r requirements/test.txt
--r requirements/build.txt
--r requirements/docs.txt
-
--e .
+-e .[test,build]
+-r docs/requirements.txt
+invoke
+tox

@@ -1,6 +1,0 @@
-# SPDX-License-Identifier: BSD-2-Clause
-pytest==6.2.1
-pytest-cov==2.11.1
-flake8==3.8.4
-flake8-bugbear==20.11.1
-black==20.8b1

@@ -1,3 +1,0 @@
-# SPDX-License-Identifier: BSD-2-Clause
-invoke==1.5.0
-tox==3.21.2

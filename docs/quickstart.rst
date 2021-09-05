@@ -32,14 +32,14 @@ Validate the config file
 
 .. code-block:: text
 
-    $ sudo zsm validate-config
+    sudo zsm validate-config
 
 Perform a dry run
 ^^^^^^^^^^^^^^^^^
 
 .. code-block:: text
 
-    $ sudo zsm cron --dry-run --log-console
+    sudo zsm cron --dry-run --log-console
 
 
 Step 3: Add to crontab

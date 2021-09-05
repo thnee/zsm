@@ -3,36 +3,16 @@
 Changelog
 =========
 
-Changelog for zsm
------------------
-
-0.2.1
+0.3.0
 ^^^^^
 
-Update zsm-lib to version 0.2.1.
+Move library code from zsm-lib into zsm.
 
-Update requirements to newer versions.
+Remove dependency on sarge.
 
-0.2.0
-^^^^^
+Update dependencies to newer versions.
 
-Update zsm-lib to version 0.2.0.
-
-Start including tests in source packages.
-
-0.1.0
-^^^^^
-
-Initial release.
-
-Add commands:
-
-- ``cron``
-- ``validate-config``
-- ``version``
-
-Changelog for zsm-lib
----------------------
+Update project config files to more modern patterns.
 
 0.2.1
 ^^^^^
@@ -43,6 +23,8 @@ Fix crash in _deserialize after upgrading to marshmallow 3.
 
 0.2.0
 ^^^^^
+
+Start including tests in source packages.
 
 Snapshot config field ``name`` renamed to ``label``,
 to avoid confusion with the actual ZFS snapshot name.
@@ -65,3 +47,9 @@ Improve test coverage.
 ^^^^^
 
 Initial release.
+
+Add commands:
+
+- ``cron``
+- ``validate-config``
+- ``version``

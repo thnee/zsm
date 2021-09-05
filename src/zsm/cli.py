@@ -1,34 +1,35 @@
 # SPDX-License-Identifier: BSD-2-Clause
-import logging
-from typing import Optional
-from pathlib import Path
 import datetime
+import logging
 import sys
+from pathlib import Path
+from typing import Optional
+
+import click
+import pid
 import pkg_resources
 
-import pid
-import click
+from . import config, manage
+from .logging import init_logging
 
 
 log = logging.getLogger(__name__)
 
 
 def load_config(config_file: Optional[Path] = None) -> Optional[dict]:
-    import zsm_lib.config
-
     if config_file is None:
-        config_file = zsm_lib.config.get_path()
+        config_file = config.get_path()
 
     log.info(f"Loading config file from: {config_file}")
 
     try:
         with open(str(config_file), "r") as f:
-            return zsm_lib.config.load(data=f)
+            return config.load(data=f)
 
     except FileNotFoundError:
         log.error(f"Config file not found: {config_file}")
 
-    except zsm_lib.config.ValidationError as e:
+    except config.ValidationError as e:
         log.error(f"Config file invalid: {e}")
 
 
@@ -72,10 +73,6 @@ def cron(
     if log_file is not None:
         log_file = Path(log_file)
 
-    import zsm_lib.manage
-
-    from . import init_logging
-
     init_logging(log_level=log_level, log_file=log_file, log_console=log_console)
 
     config_data = load_config(config_file=config_file)
@@ -85,7 +82,7 @@ def cron(
 
     try:
         with pid.PidFile("zsm_cron"):
-            zsm_lib.manage.manage_snapshots(
+            manage.manage_snapshots(
                 config=config_data, now=ctx.obj["now"], dry_run=dry_run
             )
 
@@ -104,8 +101,6 @@ def cron(
 def validate_config(config_file: str, log_level: str):
     if config_file is not None:
         config_file = Path(config_file)
-
-    from . import init_logging
 
     init_logging(log_level=log_level, log_console=True)
 

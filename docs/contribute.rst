@@ -5,7 +5,6 @@ Contributing
 
 Development takes place at:
 
-- https://gitlab.com/thnee/zsm
-- https://gitlab.com/thnee/zsm-lib
+- https://github.com/thnee/zsm
 
-Issues and Merge Requests are welcome =)
+Issues and Pull Requests are welcome =)
