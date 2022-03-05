@@ -1,8 +1,18 @@
 Changelog
 =========
 
+0.4.0
+-----
+
+Fix logic for destroying snapshots, so it handles multiple older ones.
+This is especially relevant when zsm has not been run for a while,
+and there is a backlog of very old snapshots lying around.
+
+Drop support for Python 3.6.
+Add support for Python 3.10.
+
 0.3.0
-^^^^^
+-----
 
 Move library code from zsm-lib into zsm.
 
@@ -13,14 +23,14 @@ Update dependencies to newer versions.
 Update project config files to more modern patterns.
 
 0.2.1
-^^^^^
+-----
 
 Update requirements to newer versions.
 
 Fix crash in _deserialize after upgrading to marshmallow 3.
 
 0.2.0
-^^^^^
+-----
 
 Start including tests in source packages.
 
@@ -42,7 +52,7 @@ Start including tests in source packages.
 Improve test coverage.
 
 0.1.0
-^^^^^
+-----
 
 Initial release.
 

@@ -1,11 +1,11 @@
 # -- Project information -----------------------------------------------------
 
 project = "zsm"
-copyright = "2018-2021, Mattias Lindvall"
+copyright = "2018-2022, Mattias Lindvall"
 author = "Mattias Lindvall"
 
 # The short X.Y version
-version = "0.3.0"
+version = "0.4.0"
 # The full version, including alpha/beta/rc tags
 release = version
 

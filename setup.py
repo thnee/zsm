@@ -3,7 +3,7 @@ import setuptools
 
 setuptools.setup(
     name="zsm",
-    version="0.3.0",
+    version="0.4.0",
     keywords="zfs snapshots freebsd linux",
     description="ZFS Snapshot Manager",
     long_description="Please see the project links.",
