@@ -47,7 +47,7 @@ Add a line to crontab as the root user, passing the ``cron`` command to zsm.
 
 .. code-block:: text
 
-    */1 * * * * LANG=en_US.UTF-8 zsm cron
+    */1 * * * * zsm cron
 
 The log file is by default located at ``/var/log/zsm.log``,
 and the default log level is ``INFO``.
