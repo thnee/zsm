@@ -55,8 +55,10 @@ def manage_snapshots(config: Dict, now: datetime.datetime, dry_run: bool) -> Non
 
     for snapshot_config in config["snapshots"]:
         destroy_snapshots(
+            now=now,
             dataset=snapshot_config["dataset"],
             label=snapshot_config["label"],
+            frequency=snapshot_config["frequency"],
             retention=snapshot_config["retention"],
             dry_run=dry_run,
         )
@@ -101,28 +103,33 @@ def create_snapshots(
 
 
 def destroy_snapshots(
-    dataset: zfs.Dataset, label: str, retention: int, dry_run: bool
+    now: datetime.datetime,
+    dataset: zfs.Dataset,
+    label: str,
+    frequency: datetime.timedelta,
+    retention: int,
+    dry_run: bool,
 ) -> None:
+    snapshots = get_snapshots(dataset=dataset, label=label)
+
     any_old_found = False
 
-    while True:
-        snapshots = get_snapshots(dataset=dataset, label=label)
+    for snapshot in snapshots:
+        label, timestamp = parse_snapshot(snapshot=snapshot)
 
-        if len(snapshots) > retention:
-            oldest_snapshot = snapshots[-1]
+        age = now - timestamp
+        max_age = frequency * retention
 
+        if age > max_age:
             log.info(
                 f"[{dataset.name}:{label}] "
-                f"Found old snapshot ({oldest_snapshot.name}), destroying it."
+                f"Found old snapshot ({snapshot.name}), destroying it."
             )
 
             if not dry_run:
-                zfs.destroy_snapshot(snapshot=oldest_snapshot)
+                zfs.destroy_snapshot(snapshot=snapshot)
 
             any_old_found = True
-
-        else:
-            break
 
     if not any_old_found:
         log.info(f"[{dataset.name}:{label}] There are no old snapshots to destroy.")
