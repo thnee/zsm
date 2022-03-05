@@ -33,6 +33,7 @@ setuptools.setup(
             "isort ~= 5.10.1",
             "invoke ~= 1.6.0",
             "tox ~= 3.24.5",
+            "freezegun ~= 1.2.0",
         ],
         "build": [
             "wheel ~= 0.37.1",
