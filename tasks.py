@@ -15,6 +15,30 @@ def clean(c):
         c.run("rm -rf docs/_build", warn=True)
 
 
+@task(aliases=["l"])
+def lint(c):
+    with c.cd(str(REPO_ROOT)):
+        ok = True
+        print("Running flake8")
+        r = c.run("flake8 .", pty=True, warn=True)
+        ok = ok and r.ok
+        print("Running black")
+        r = c.run("black --check .", pty=True, warn=True)
+        ok = ok and r.ok
+        print("Running isort")
+        r = c.run("isort --quiet --check .", pty=True, warn=True)
+        ok = ok and r.ok
+        if not ok:
+            exit(1)
+
+
+@task(aliases=["f"])
+def fmt(c):
+    with c.cd(str(REPO_ROOT)):
+        c.run("black .", pty=True)
+        c.run("isort .", pty=True)
+
+
 @task(aliases=["t"])
 def test(c):
     with c.cd(str(REPO_ROOT)):
@@ -38,12 +62,6 @@ def publish(c, live=False):
 
     with c.cd(str(REPO_ROOT)):
         c.run(f"twine upload --repository-url '{url}' dist/*", pty=True)
-
-
-@task(aliases=["f"])
-def format_code(c):
-    with c.cd(str(REPO_ROOT)):
-        c.run("black src/ tests/ setup.py tasks.py", pty=True)
 
 
 @task(aliases=["d"])

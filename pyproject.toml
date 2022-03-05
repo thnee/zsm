@@ -20,6 +20,8 @@ exclude = '''
 /(
   | \.git
   | __pycache__
+  | build
+  | dist
   | \.tox
   | \.pytest_cache
 )/
@@ -28,5 +30,12 @@ exclude = '''
 [tool.isort]
 profile = "black"
 line_length = 88
-py_version = "38"
 lines_after_imports = 2
+skip = [
+  ".git",
+  "__pycache__",
+  "build",
+  "dist",
+  ".tox",
+  ".pytest_cache",
+]
