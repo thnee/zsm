@@ -1,4 +1,3 @@
-# SPDX-License-Identifier: BSD-2-Clause
 import logging
 import subprocess
 from dataclasses import dataclass

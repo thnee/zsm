@@ -1,5 +1,3 @@
-.. SPDX-License-Identifier: BSD-2-Clause
-
 Welcome to zsm's documentation!
 ===============================
 

@@ -1,4 +1,3 @@
-# SPDX-License-Identifier: BSD-2-Clause
 include README.rst LICENSE tox.ini pyproject.toml .coveragerc
 graft src
 graft tests

@@ -1,4 +1,3 @@
-# SPDX-License-Identifier: BSD-2-Clause
 from unittest import mock
 
 import pid

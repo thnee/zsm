@@ -1,4 +1,3 @@
-# SPDX-License-Identifier: BSD-2-Clause
 import textwrap
 from pathlib import Path
 from unittest import mock

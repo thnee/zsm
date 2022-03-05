@@ -1,4 +1,3 @@
-# SPDX-License-Identifier: BSD-2-Clause
 from pathlib import Path
 
 from invoke import task

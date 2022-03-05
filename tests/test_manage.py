@@ -1,4 +1,3 @@
-# SPDX-License-Identifier: BSD-2-Clause
 import datetime
 from unittest import mock
 
