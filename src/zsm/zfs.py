@@ -27,7 +27,7 @@ def run(cmd: str) -> Iterable[str]:
     p = subprocess.run(args=cmd, shell=True, text=True, capture_output=True)
     if p.returncode != 0:
         raise ZfsOperationFailed(p.stderr.split("\n")[0])
-    return p.stdout.rstrip("\n").split("\n")
+    return p.stdout.rstrip("\n").split("\n") if p.stdout else []
 
 
 def get_datasets():
